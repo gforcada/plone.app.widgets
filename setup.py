@@ -51,7 +51,7 @@ setup(
         'dexterity': [
             'pytz',
             'plone.app.dexterity',
-            'plone.app.contenttypes>=1.0.99',
+            'plone.app.contenttypes>=1.1a2',
             'plone.app.event',
         ],
     },
