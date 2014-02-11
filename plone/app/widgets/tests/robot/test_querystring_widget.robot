@@ -73,6 +73,15 @@ Querystring Widget metadata criteria master/select behaviour is correct
         Operator slave field becomes visible  1  .querystring-criteria-value-MultipleSelectionWidget
 
 
+Collection Creation works
+  Given I'm logged in as a 'Site Administrator'
+    And I create a collection  My Collection
+   When I select criteria index in row  1  Location
+    And I select criteria operator in row  1  Absolute path
+    And I save
+        Page should contain Element  jquery=.contenttype-collection:contains(My Collection)
+
+
 *** Keywords ***
 
 I select criteria index in row
@@ -105,8 +114,3 @@ Date criteria operators are functional
   I select criteria operator in row  ${number}  Before today
   I select criteria operator in row  ${number}  Between dates
   Then Operator slave field becomes visible  ${number}  .querystring-criteria-value-DateRangeWidget
-
-
-Debug2
-  Import Library  DebugLibrary
-  Debug
