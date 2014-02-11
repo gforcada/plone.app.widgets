@@ -40,7 +40,7 @@ setup(
         'test': [
             'plone.app.robotframework',
             'plone.app.widgets[archetypes, dexterity]',
-            'plone.app.testing',
+            'plone.app.testing>=4.2.4',
             'mock',
         ],
         'archetypes': [
